@@ -104,6 +104,9 @@ a:hover {
     margin-right: 0;
   }
 }
+.mid {
+  vertical-align: middle;
+}
 #header {
   text-shadow: 0 0 1px #fff;
   margin: 50px auto;
