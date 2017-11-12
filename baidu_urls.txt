@@ -1,3 +1,4 @@
+http://ramosss.com/2017/11/13/Lintcode-646-第一个独特字符位置/
 http://ramosss.com/2017/11/12/Lintcode-512-解码方法/
 http://ramosss.com/2017/11/12/Lintcode-524-左填充/
 http://ramosss.com/2017/11/12/Lintcode-113-删除排序链表中的重复数字-II/
