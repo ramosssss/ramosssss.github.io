@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Ramos</title>
+  <title>Lintcode #524 左填充 | Ramos</title>
   <meta name="author" content="Ramos">
   
   <meta name="description" content="个人博客">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Lintcode #524 左填充"/>
   <meta property="og:site_name" content="Ramos"/>
 
   
@@ -57,8 +57,7 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
@@ -68,22 +67,35 @@
       
       
   
-    <h1 class="title"><a href="/2017/11/12/Lintcode-524-左填充/">Lintcode #524 左填充</a></h1>
+    <h1 class="title">Lintcode #524 左填充</h1>
   
 
     </header>
     <div class="entry">
       
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>实现一个leftpad库，如果不知道什么是leftpad可以看样例<br>
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>实现一个leftpad库，如果不知道什么是leftpad可以看样例<br><a id="more"></a></p>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><p>leftpad(“foo”, 5)<br><strong>&gt;&gt;</strong> “  foo”</p>
+<p>leftpad(“foobar”, 6)<br><strong>&gt;&gt;</strong> “foobar”</p>
+<p>leftpad(“1”, 2, “0”)<br><strong>&gt;&gt;</strong> “01”</p>
+<h2 id="解体思路"><a href="#解体思路" class="headerlink" title="解体思路"></a>解体思路</h2><p><strong>最基本的字符串处理题</strong>。</p>
+<h2 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringUtils</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> originalStr: the string we want to append to with spaces</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> size: the target length of the string</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span>: A string</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">public</span> String <span class="title">leftPad</span><span class="params">(String originalStr, <span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> leftPad(originalStr, size, <span class="string">' '</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * @param originalStr: the string we want to append to</span></span><br><span class="line"><span class="comment">     * @param size: the target length of the string</span></span><br><span class="line"><span class="comment">     * @param padChar: the character to pad to the left side of the string</span></span><br><span class="line"><span class="comment">     * @return: A string</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">leftPad</span><span class="params">(String originalStr, <span class="keyword">int</span> size, <span class="keyword">char</span> padChar)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (size &lt;= originalStr.length())</span><br><span class="line">            <span class="keyword">return</span> originalStr;</span><br><span class="line">        StringBuilder re = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">int</span> n = size - originalStr.length();</span><br><span class="line">        <span class="keyword">while</span> (n-- &gt; <span class="number">0</span>)</span><br><span class="line">            re.append(padChar);</span><br><span class="line">        re.append(originalStr);</span><br><span class="line">        <span class="keyword">return</span> re.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer>
       
         
-          <div class="alignleft">
-            <a href="/2017/11/12/Lintcode-524-左填充/#more" class="more-link">阅读全文</a>
-          </div>
+  
+  <div class="categories">
+    <a href="/categories/算法与数据结构/">算法与数据结构</a>
+  </div>
+
         
+  
+  <div class="tags">
+    <a href="/tags/字符串处理/">字符串处理</a>
+  </div>
+
         
       
       <div class="clearfix"></div>
@@ -92,86 +104,7 @@
 </article>
 
 
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-11-12T06:45:54.000Z"><a href="/2017/11/12/Lintcode-113-删除排序链表中的重复数字-II/">2017-11-12</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2017/11/12/Lintcode-113-删除排序链表中的重复数字-II/">Lintcode #113 删除排序链表中的重复数字 II</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>给定一个排序链表，删除所有重复的元素只留下原链表中没有重复的元素。<br>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2017/11/12/Lintcode-113-删除排序链表中的重复数字-II/#more" class="more-link">阅读全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2017-11-10T13:47:38.000Z"><a href="/2017/11/10/Lintcode-110-最小路径和/">2017-11-10</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2017/11/10/Lintcode-110-最小路径和/">Lintcode #110 最小路径和</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>给定一个只含非负整数的m*n网格，找到一条从左上角到右下角的可以使数字和最小的路径。<br>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2017/11/10/Lintcode-110-最小路径和/#more" class="more-link">阅读全文</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-<nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav></div></div>
+</div></div>
     <aside id="sidebar" class="alignright">
   <!-- <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
