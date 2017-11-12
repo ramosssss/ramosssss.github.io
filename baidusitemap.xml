@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>http://ramosss.com/2017/11/12/Lintcode-512-%E8%A7%A3%E7%A0%81%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2017-11-12T08:48:42.575Z</lastmod>
+    <data>
+        <display>
+        <title>Lintcode #512 解码方法</title>
+        <pubTime>2017-11-12T08:24:29.000Z</pubTime>
+        
+        <tag>Lintcode</tag>
+         
+        <tag>动态规划</tag>
+         
+        <tag>字符串处理</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法与数据结构" url="http://ramosss.com/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ramosss.com/2017/11/12/Lintcode-524-%E5%B7%A6%E5%A1%AB%E5%85%85/</loc>
-    <lastmod>2017-11-12T07:44:20.532Z</lastmod>
+    <lastmod>2017-11-12T07:58:17.964Z</lastmod>
     <data>
         <display>
         <title>Lintcode #524 左填充</title>
