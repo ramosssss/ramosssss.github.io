@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Ramos</title>
+  <title>Leetcode #693 Binary Number with Alternating Bits | Ramos</title>
   <meta name="author" content="Ramos">
   
   <meta name="description" content="个人博客">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Leetcode #693 Binary Number with Alternating Bits"/>
   <meta property="og:site_name" content="Ramos"/>
 
   
@@ -59,28 +59,57 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="page">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
       
+        <div class="icon"></div>
+        <time datetime="2017-11-14T08:27:00.000Z"><a href="/2017/11/14/Leetcode-693-Binary-Number-with-Alternating-Bits/">2017-11-14</a></time>
+      
       
   
-    <h1 class="title"></h1>
+    <h1 class="title">Leetcode #693 Binary Number with Alternating Bits</h1>
   
 
     </header>
     <div class="entry">
       
-        <h1 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h1><pre><code>在沪在读渣硕一个，不务正业。
-Java &amp;&amp; Linux &amp;&amp; web &amp;&amp; 算法 学习中
-</code></pre>
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits will always have different values.<br><a id="more"></a></p>
+<h2 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h2><ul>
+<li>Example 1:<br>  Input: 5<br>  Output: True<br>  Explanation:<br>  The binary representation of 5 is: 101</li>
+<li>Example 2:<br>  Input: 7<br>  Output: False<br>  Explanation:<br>  The binary representation of 7 is: 111.</li>
+<li>Example 3:<br>  Input: 11<br>  Output: False<br>  Explanation:<br>  The binary representation of 11 is: 1011.</li>
+<li>Example 4:<br>  Input: 10<br>  Output: True<br>  Explanation:<br>  The binary representation of 10 is: 1010.</li>
+</ul>
+<h2 id="解体思路"><a href="#解体思路" class="headerlink" title="解体思路"></a>解体思路</h2><ol>
+<li><p>有趣的一道题。题目大意是：输入一个十进制的正整数，将它转为二进制后，如果相邻的两位都是不同的数，则返回<code>true</code>，反之，则返回<code>false</code>。</p>
+</li>
+<li><p>我们来讨论返回为<code>true</code>的情况。就比如说数<code>10</code>吧，他的二进制数为<code>1010</code>，观察它，如果把他最后一位数砍掉（即除于2或者右移1位），得到<code>101</code>。这与原来的<code>1010</code>有什么联系呢？</p>
+</li>
+<li><p>最大的联系就是，他们在相同位数上的数都是不同的，如果我们把<code>1010</code>和<code>101</code>异或一下，就会得到<code>1111</code>。<code>1111</code>的特点显而易见，全都是<strong>1</strong>。</p>
+</li>
+<li><p>那我们如何辨别全都是1的情况呢？最简单的就是把它加一再和原数与一下。（<code>1111 ^ (1111 + 1) -&gt; 1111 ^ 10000</code>）判断是否为0。</p>
+</li>
+</ol>
+<h2 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasAlternatingBits</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ((((n &gt;&gt; <span class="number">1</span>) ^ n) + <span class="number">1</span>) &amp; ((n &gt;&gt; <span class="number">1</span>) ^ n )) == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer>
       
         
+  
+  <div class="categories">
+    <a href="/categories/算法与数据结构/">算法与数据结构</a>
+  </div>
+
         
+  
+  <div class="tags">
+    <a href="/tags/Leetcode/">Leetcode</a>, <a href="/tags/位运算/">位运算</a>
+  </div>
+
         
       
       <div class="clearfix"></div>
